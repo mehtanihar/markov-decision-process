@@ -1,0 +1,29 @@
+
+CS 747 Assignment 2
+Name: MEHTA NIHAR NIKHIL
+Roll: 13D100011
+
+1. Algorithm
+
+The planner uses policy iteration algorithm.
+It consists of two functions evaluate_policy and policy_improve.
+The evaluate_policy function tries to evaluate the value functions V
+for a given policy.It considers sum over all other states s' for a given state s and a given policy for the states and stores it in the value function.
+The policy_improve function tries to find the policy that maximises the above sum. If the new policy is different from the previous one,
+the new policy is an improved one. Now, we go back to evaluate_policy function and then again back to policy_improve function till we reach convergence.
+
+The policy iteration algorithm coverges much faster than value iteration algorithm. Hence I have used the former one.
+
+
+2. Libraries
+It uses fstream library for input-output.
+It also uses list library for a data structure list of 2D multiarrays
+which corresponds to the list of rewards or probabilities to states s' for each value of State s and action a.
+
+3. References
+
+Pseudo code snippet forpolicy iteration has been used from the following website:
+https://webdocs.cs.ualberta.ca/~sutton/book/4/node4.html
+
+
+
